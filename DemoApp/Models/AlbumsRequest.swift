@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct AlbumsDetails: Codable {
+struct Albums: Codable {
     let id: Int?
     let title: String?
     
