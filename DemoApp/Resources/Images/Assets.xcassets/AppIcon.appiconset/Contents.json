@@ -145,9 +145,8 @@
       "scale" : "2x"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "1024.png",
+      "size" : "1024x1024",
       "scale" : "1x"
     },
     {
@@ -221,9 +220,8 @@
       "subtype" : "44mm"
     },
     {
-      "size" : "1024x1024",
       "idiom" : "watch-marketing",
-      "filename" : "1024.png",
+      "size" : "1024x1024",
       "scale" : "1x"
     }
   ],
