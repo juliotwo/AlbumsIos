@@ -17,3 +17,13 @@ struct Albums: Codable {
         case title = "title"
     }
 }
+
+struct AlbumsDetails: Codable {
+    let title: String?
+    let url: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case url = "url"
+    }
+}

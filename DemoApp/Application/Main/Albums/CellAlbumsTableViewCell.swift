@@ -32,7 +32,8 @@ class CellAlbumsTableViewCell: UITableViewCell {
     }
     
     func setUpView() {
-//        idAlbum.text = viewModel.id
+        let id = String(viewModel.id)
+        idAlbum.text = id
         titleAlbum.text = viewModel.title
     }
 
