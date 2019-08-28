@@ -10,10 +10,12 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var viewModel = AlbumsViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
     
 
@@ -27,4 +29,31 @@ class AlbumsViewController: UIViewController {
     }
     */
 
+}
+
+extension AlbumsViewController: AlbumsViewDelegate {
+    func reloadData() {
+        tableView.reloadData()
+    }
+}
+
+extension AlbumsViewController: UITabBarDelegate {
+    
+}
+
+extension AlbumsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let count = viewModel.numberOfItems
+        tableView.separatorStyle = count == 0 ? .none : .singleLine
+        return count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CellAlbumsTableViewCell else{ return UITableViewCell() }
+        
+        cell.viewModel = viewModel.item(at: indexPath)
+        return cell
+    }
+    
+    
 }

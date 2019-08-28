@@ -27,6 +27,9 @@
 		80A0C51F2314E6530017D927 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C51E2314E6530017D927 /* ImageViewExtension.swift */; };
 		80A0C5212315BD880017D927 /* AlbumsServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C5202315BD880017D927 /* AlbumsServices.swift */; };
 		80A0C5232315BE280017D927 /* AlbumsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A0C5222315BE280017D927 /* AlbumsRequest.swift */; };
+		80A179612315EB610063374D /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A179602315EB610063374D /* AlbumsViewModel.swift */; };
+		80A179632315EB8C0063374D /* CellAlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A179622315EB8C0063374D /* CellAlbumsTableViewCell.swift */; };
+		80A179652316059C0063374D /* AlbumsDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A179642316059C0063374D /* AlbumsDetails.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		80A0C51E2314E6530017D927 /* ImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		80A0C5202315BD880017D927 /* AlbumsServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsServices.swift; sourceTree = "<group>"; };
 		80A0C5222315BE280017D927 /* AlbumsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRequest.swift; sourceTree = "<group>"; };
+		80A179602315EB610063374D /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		80A179622315EB8C0063374D /* CellAlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAlbumsTableViewCell.swift; sourceTree = "<group>"; };
+		80A179642316059C0063374D /* AlbumsDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsDetails.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,8 @@
 			children = (
 				803C2B5E23109EDC0062C04E /* Albums.storyboard */,
 				80A0C50F2311F9460017D927 /* AlbumsViewController.swift */,
+				80A179602315EB610063374D /* AlbumsViewModel.swift */,
+				80A179622315EB8C0063374D /* CellAlbumsTableViewCell.swift */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -212,6 +220,7 @@
 		803C2B56231099DC0062C04E /* AlbumsDetails */ = {
 			isa = PBXGroup;
 			children = (
+				80A179642316059C0063374D /* AlbumsDetails.storyboard */,
 			);
 			path = AlbumsDetails;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				803C2B41231091100062C04E /* LaunchScreen.storyboard in Resources */,
+				80A179652316059C0063374D /* AlbumsDetails.storyboard in Resources */,
 				803C2B5D23109EBB0062C04E /* Users.storyboard in Resources */,
 				803C2B5F23109EDC0062C04E /* Albums.storyboard in Resources */,
 				803C2B512310945D0062C04E /* Colors.xcassets in Resources */,
@@ -323,16 +333,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -369,10 +372,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				80A0C5102311F9460017D927 /* AlbumsViewController.swift in Sources */,
+				80A179632315EB8C0063374D /* CellAlbumsTableViewCell.swift in Sources */,
 				80A0C5122311FAB10017D927 /* UsersServices.swift in Sources */,
 				80A0C51F2314E6530017D927 /* ImageViewExtension.swift in Sources */,
 				803C2B392310910E0062C04E /* TabBarViewController.swift in Sources */,
 				80A0C50E2311F92D0017D927 /* UsersViewController.swift in Sources */,
+				80A179612315EB610063374D /* AlbumsViewModel.swift in Sources */,
 				80A0C5142311FCE00017D927 /* UsersRequest.swift in Sources */,
 				80A0C518231258CC0017D927 /* CellUserViewModel.swift in Sources */,
 				80A0C516231256A10017D927 /* UsersViewModel.swift in Sources */,
