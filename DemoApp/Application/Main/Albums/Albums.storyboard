@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Albums View Controller-->
         <scene sceneID="gXa-Mp-i5Y">
             <objects>
-                <viewController id="Rpr-Pv-MfZ" sceneMemberID="viewController">
+                <viewController id="Rpr-Pv-MfZ" customClass="AlbumsViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pxt-NW-3Fv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="64" id="t6Y-Sb-1re">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="64" id="t6Y-Sb-1re" customClass="CellAlbumsTableViewCell" customModule="DemoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="64"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t6Y-Sb-1re" id="fyJ-Rx-1e5">
@@ -46,14 +46,25 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="idAlbum" destination="vl1-mK-EWl" id="752-7L-nbP"/>
+                                            <outlet property="titleAlbum" destination="Xo5-wT-Okj" id="iwm-7z-Gfu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rpr-Pv-MfZ" id="5dT-dd-gTu"/>
+                                    <outlet property="delegate" destination="Rpr-Pv-MfZ" id="gmw-mG-To9"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yQd-UC-Ip6"/>
                     </view>
                     <navigationItem key="navigationItem" id="Ze9-Qo-Kw5"/>
+                    <connections>
+                        <outlet property="tableView" destination="kVY-8K-bZK" id="Lw6-XY-8Pd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n76-uf-hMj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
