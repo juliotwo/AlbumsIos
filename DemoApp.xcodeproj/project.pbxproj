@@ -30,6 +30,7 @@
 		80A179612315EB610063374D /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A179602315EB610063374D /* AlbumsViewModel.swift */; };
 		80A179632315EB8C0063374D /* CellAlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A179622315EB8C0063374D /* CellAlbumsTableViewCell.swift */; };
 		80A179652316059C0063374D /* AlbumsDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80A179642316059C0063374D /* AlbumsDetails.storyboard */; };
+		80C65A7C2316442B00107477 /* AlbumsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C65A7B2316442B00107477 /* AlbumsDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		80A179602315EB610063374D /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		80A179622315EB8C0063374D /* CellAlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellAlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		80A179642316059C0063374D /* AlbumsDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumsDetails.storyboard; sourceTree = "<group>"; };
+		80C65A7B2316442B00107477 /* AlbumsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				80A179642316059C0063374D /* AlbumsDetails.storyboard */,
+				80C65A7B2316442B00107477 /* AlbumsDetailsViewController.swift */,
 			);
 			path = AlbumsDetails;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				80A179612315EB610063374D /* AlbumsViewModel.swift in Sources */,
 				80A0C5142311FCE00017D927 /* UsersRequest.swift in Sources */,
 				80A0C518231258CC0017D927 /* CellUserViewModel.swift in Sources */,
+				80C65A7C2316442B00107477 /* AlbumsDetailsViewController.swift in Sources */,
 				80A0C516231256A10017D927 /* UsersViewModel.swift in Sources */,
 				80A0C5212315BD880017D927 /* AlbumsServices.swift in Sources */,
 				803C2B372310910E0062C04E /* AppDelegate.swift in Sources */,

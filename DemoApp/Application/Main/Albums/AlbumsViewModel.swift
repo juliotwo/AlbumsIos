@@ -39,6 +39,7 @@ class AlbumsViewModel {
 }
 
 class AlbumsDetailsViewModel {
+    
     private var details: Albums
     
     var title: String {

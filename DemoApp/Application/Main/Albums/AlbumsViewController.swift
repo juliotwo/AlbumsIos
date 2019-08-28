@@ -12,23 +12,16 @@ class AlbumsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private var titleAlbum: String?
+    private var id: String?
+    
     var viewModel = AlbumsViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.delegate = self
+        viewModel.getData()
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension AlbumsViewController: AlbumsViewDelegate {
@@ -37,7 +30,7 @@ extension AlbumsViewController: AlbumsViewDelegate {
     }
 }
 
-extension AlbumsViewController: UITabBarDelegate {
+extension AlbumsViewController: UITableViewDelegate {
     
 }
 
@@ -53,6 +46,19 @@ extension AlbumsViewController: UITableViewDataSource {
         
         cell.viewModel = viewModel.item(at: indexPath)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.titleAlbum = viewModel.item(at: indexPath).title
+        let id = String(viewModel.item(at: indexPath).id)
+        self.id = id
+        self.performSegue(withIdentifier: "GoToAlbumsDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let pass = segue.destination as? AlbumsDetailsViewController else { return }
+        pass.titleAlbum = self.titleAlbum
+        pass.id = self.id
     }
     
     
