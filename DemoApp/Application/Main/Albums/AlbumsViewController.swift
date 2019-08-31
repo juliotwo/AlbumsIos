@@ -13,7 +13,7 @@ class AlbumsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var titleAlbum: String?
-    private var id: String?
+    private var id: Int?
     
     var viewModel = AlbumsViewModel()
     override func viewDidLoad() {
@@ -50,8 +50,7 @@ extension AlbumsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.titleAlbum = viewModel.item(at: indexPath).title
-        let id = String(viewModel.item(at: indexPath).id)
-        self.id = id
+        self.id = viewModel.item(at: indexPath).id
         self.performSegue(withIdentifier: "GoToAlbumsDetails", sender: self)
     }
     

@@ -19,11 +19,11 @@ class UsersServices {
         
         Alamofire.request(urlString, headers: headers).response { response in
             guard let data =  response.data else { return }
-            print(data)
+//            print(data)
             do {
                 let decoder = JSONDecoder()
                 let usersRequest = try decoder.decode([UserDetails].self, from: data)
-                print(usersRequest)
+//                print(usersRequest)
                 completion(usersRequest)
             } catch let error {
                 print(error)

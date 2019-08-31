@@ -18,7 +18,7 @@ struct Albums: Codable {
     }
 }
 
-struct AlbumsDetails: Codable {
+struct AlbumsDetailsRequest: Codable {
     let title: String?
     let url: String?
     
