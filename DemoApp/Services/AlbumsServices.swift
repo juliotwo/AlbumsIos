@@ -17,11 +17,11 @@ class AlbumsServices {
         ]
         Alamofire.request(urlString, headers: headers).response { response in
             guard let data = response.data else { return }
-            print(data)
+//            print(data)
             do {
                 let decoder = JSONDecoder()
                 let albumsRequest = try decoder.decode([Albums].self, from: data)
-                print(albumsRequest)
+//                print(albumsRequest)
                 completion(albumsRequest)
             } catch let error {
                 print(error)
@@ -30,17 +30,18 @@ class AlbumsServices {
         }
     }
     
-    static func getAlbumsDetails(completion: @escaping ([AlbumsDetails]?) -> Void) {
-        let urlString = "https://jsonplaceholder.typicode.com/photos?albumId=1"
+    static func getAlbumsDetails(byId: Int, completion: @escaping ([AlbumsDetailsRequest]?) -> Void) {
+        let id = String(byId)
+        let urlString = "https://jsonplaceholder.typicode.com/photos?albumId=\(id)"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
         ]
         Alamofire.request(urlString, headers: headers).response { response in
             guard let data = response.data else { return }
-            print(data)
+//            print(data)
             do {
                 let decoder = JSONDecoder()
-                let albumsDetails = try decoder.decode([AlbumsDetails].self, from: data)
+                let albumsDetails = try decoder.decode([AlbumsDetailsRequest].self, from: data)
                 print(albumsDetails)
                 completion(albumsDetails)
             } catch let error {
